@@ -5,15 +5,13 @@
       "samplingSettings": {
         "isEnabled": true,
         "excludedTypes": "Request"
-      },
-      "logLevel": {
-        "default": "Trace"
       }
     }
   },
   "customHandler": {
     "description": {
-      "defaultExecutablePath": "handler.exe",
+      "defaultExecutablePath": "handler",
+      "workingDirectory": "",
       "arguments": []
     },
     "enableForwardingHttpRequest": true
