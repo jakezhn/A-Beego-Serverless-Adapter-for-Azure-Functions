@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	azfuncAdapter "beegoserverless/serverlessAdapter"
+	azfuncAdapter "github.com/jakezhn/Beego-Azure-Functions-Deployment-Adapter/serverlessAdapter"
 
 	"github.com/beego/beego/v2/server/web"
 )
