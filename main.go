@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"net/http"
 
 	azfuncAdapter "github.com/jakezhn/Beego-Azure-Functions-Deployment-Adapter/serverlessAdapter"
 
@@ -59,17 +60,23 @@ func (ctrl *MyController2) Post() {
 	}
 }
 
+func hello(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Hello from azfunction!")
+}
+
 func main() {
-	// Create controllers and set up routers' indo (path and action)
-	Ctrl1 := &MyController1{routeInfo: make(map[string]string)}
-	Ctrl1.routeInfo["/api/hello"] = "Get"
+	// // Create controllers and set up routers' indo (path and action)
+	// Ctrl1 := &MyController1{routeInfo: make(map[string]string)}
+	// Ctrl1.routeInfo["/api/hello"] = "Get"
 
-	Ctrl2 := &MyController2{routeInfo: make(map[string]string)}
-	Ctrl2.routeInfo["/api/whatsup"] = "Post"
+	// Ctrl2 := &MyController2{routeInfo: make(map[string]string)}
+	// Ctrl2.routeInfo["/api/whatsup"] = "Post"
 
-	// Register routers and http functions
-	azfuncAdapter.HttpFuncsHandler(Ctrl1.routeInfo, Ctrl1, "MyController1")
-	azfuncAdapter.HttpFuncsHandler(Ctrl2.routeInfo, Ctrl2, "MyController2")
+	// // Register routers and http functions
+	// azfuncAdapter.HttpFuncsHandler(Ctrl1.routeInfo, Ctrl1, "MyController1")
+	// azfuncAdapter.HttpFuncsHandler(Ctrl2.routeInfo, Ctrl2, "MyController2")
+
+	http.HandleFunc("/api/hello", hello)
 
 	// Setting up default port listening
 	azfuncAdapter.PortHandler(":8080")
