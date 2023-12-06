@@ -31,8 +31,8 @@ jobs:
 
     - name: 'Install Dependencies'
       run: |
-        go mod tidy
-        go mod download
+        go get github.com/beego/beego/v2
+        go get github.com/jakezhn/Beego-Azure-Functions-Deployment-Adapter
 
     - name: Build
       run: GOOS=linux GOARCH=amd64 go build main.go

@@ -2,17 +2,16 @@ module beegoserverless
 
 go 1.20
 
-require github.com/beego/beego/v2 v2.1.4
-
-require gopkg.in/yaml.v2 v2.4.0 // indirect
+require (
+	github.com/beego/beego/v2 v2.1.4
+	github.com/jakezhn/Beego-Azure-Functions-Deployment-Adapter v0.0.0-20231206174717-b44e07fcedde
+)
 
 require (
-	github.com/astaxie/beego v1.12.3
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
-	github.com/jakezhn/Beego-Azure-Functions-Deployment-Adapter v0.0.0-20231206174717-b44e07fcedde
 	github.com/kr/text v0.2.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
