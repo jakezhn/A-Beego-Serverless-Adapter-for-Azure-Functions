@@ -9,6 +9,7 @@ import (
 	"github.com/beego/beego/v2/server/web"
 )
 
+// Demo
 // Controller is controller for BeegoApp
 type MyController1 struct {
 	web.Controller
@@ -71,5 +72,6 @@ func main() {
 	azfuncAdapter.HttpFuncsHandler(Ctrl2.routeInfo, Ctrl2, "MyController2")
 
 	//Setting up default port listening
+	// Demo
 	azfuncAdapter.PortHandler(":8080")
 }
