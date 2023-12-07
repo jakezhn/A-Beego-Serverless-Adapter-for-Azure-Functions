@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"net/http"
 
 	"github.com/beego/beego/v2/server/web"
 )
@@ -57,10 +56,6 @@ func (ctrl *MyController2) Post() {
 			ctrl.Ctx.WriteString(fmt.Sprintf("%v", "Whatsup from Azure Functions!"))
 		}
 	}
-}
-
-func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello from azfunction!")
 }
 
 func main() {
