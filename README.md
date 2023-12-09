@@ -7,7 +7,7 @@ Install [Beego](https://github.com/beego/beego), and [Bee](https://github.com/be
 
 Install [Azure Functions Core Tool](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp).
 
-## Run
+## Running
 
 After integrated with this adapter, there are still a little modification needs to be done on the source code, basically about the Controllers and Routers.
 
@@ -52,3 +52,35 @@ az ad sp create-for-rbac --name <your app name> --role administrator --scopes /s
 This credentials should be added to Github secret for the repository.
 
 Finally, push the code to Github repository and the deployment should start.
+## Testing
+When deployed locally with Azure Functions Core Tools:
+<img src="image/deploy_local.png" width="800">
+
+When accessing localhost:7071, this page indicates that this web app is successfully deployed locally:
+<img src="image/main_local.png" width="800">
+
+When accessing the API hello and whatsup:
+<img src="image/get_local.png" width="400">
+<img src="image/post_local.png" width="400">
+
+Since the API whatsup is configured for POST method, we shall sending a POST request using curl, then we have:
+<img src="image/curl_local.png" width="600">
+
+Now, we have validated the API deployment in local environment, after running the Github Action workflow, we shall see the CI/CD process in repository:
+<img src="image/actions.png" width="800">
+
+In Azure Portal (https://portal.azure.com/), we can find that the targeted Function App has new functions:
+<img src="image/functionapp.png" width="800">
+
+Through the given URL of the Function App, we can find that the Azure Functions app is online:
+<img src="image/main_serverless.png" width="800">
+
+When accessing the deployed APIs, we have:
+<img src="image/get_serverless.png" width="400">
+<img src="image/post_serverless.png" width="400">
+<img src="image/curl_serverless.png" width="600">
+
+We can also monitor the invocation status of web APIs through Azure Function’s Monitoring:
+<img src="image/monitor_serverless.png" width="800">
+
+
