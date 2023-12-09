@@ -61,8 +61,8 @@ When accessing localhost:7071, this page indicates that this web app is successf
 
 When accessing the API hello and whatsup:
 
-<img src="image/get_local.png" width="600">
-<img src="image/post_local.png" width="600">
+<img src="image/get_local.png" width="500">
+<img src="image/post_local.png" width="500">
 
 Since the API whatsup is configured for POST method, we shall sending a POST request using curl, then we have:
 <img src="image/curl_local.png" width="600">
@@ -78,8 +78,8 @@ Through the given URL of the Function App, we can find that the Azure Functions 
 
 When accessing the deployed APIs, we have:
 
-<img src="image/get_serverless.png" width="600">
-<img src="image/post_serverless.png" width="600">
+<img src="image/get_serverless.png" width="500">
+<img src="image/post_serverless.png" width="500">
 <img src="image/curl_serverless.png" width="600">
 
 We can also monitor the invocation status of web APIs through Azure Function’s Monitoring:
