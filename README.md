@@ -1,5 +1,6 @@
 # A Beego Serverless Adapter for Azure Functions Deployment
-This project aims to implement an adapter for web APIs based on Beego web framework in Go language for their serverless deployment on Azure Functions.
+This project aims to implement an adapter for web APIs based on Beego web framework in Go language, that enables their serverless deployment on Azure Functions.
+
 ## Installation
 Install [Go](https://go.dev/doc/install) dependencies.
 
